@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Movie Recommender</title>
+</head>
+<body>
+    <h2>Enter Your Emotion</h2>
+    <form method="post">
+        <input type="text" name="emotion" placeholder="e.g. happy, sad, angry" required>
+        <input type="submit" value="Get Movies">
+    </form>
+
+    {% if recommendations %}
+        <h3>Recommended Movies:</h3>
+        <ul>
+        {% for movie in recommendations %}
+            <li>{{ movie }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
